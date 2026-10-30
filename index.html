@@ -2,71 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MAA COLLECTION | Ladies Fashion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f1eb">
+  <meta name="description" content="MAA COLLECTION — elegant casual and fancy wear in Karachi, Pakistan.">
+  <title>MAA COLLECTION | Elegance in Every Thread</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #f8f5ef;
-      color: #24211d;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      background: #171612;
-      color: #e5c78c;
-      padding: 25px 15px;
-      text-align: center;
-    }
-    header h1 { letter-spacing: 5px; }
-    nav { padding: 15px; text-align: center; }
-    nav a {
-      color: #24211d;
-      margin: 10px;
-      text-decoration: none;
-    }
-    main { text-align: center; padding: 65px 20px; }
-    h2 { font-size: 36px; }
-    .btn {
-      display: inline-block;
-      padding: 14px 25px;
-      background: #171612;
-      color: #e5c78c;
-      text-decoration: none;
-      margin-top: 15px;
-    }
-    footer {
-      background: #171612;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
+    :root{--ink:#302923;--muted:#82766d;--cream:#faf7f2;--sand:#eee4d9;--rose:#b77c75;--rose-dark:#965e59;--sage:#899184;--white:#fff;--line:#e9dfd5;--shadow:0 18px 55px rgba(65,47,37,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}
+    .topbar{background:#39332d;color:#f9f4ee;text-align:center;padding:9px 14px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+    header{position:sticky;top:0;z-index:20;background:rgba(250,247,242,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(233,223,213,.8)}
+    .nav{max-width:1200px;margin:auto;padding:17px 5%;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:11px}.brand-mark{width:39px;height:39px;border:1px solid var(--rose);border-radius:50%;display:grid;place-items:center;color:var(--rose-dark);font-family:"Playfair Display",serif;font-size:19px}.brand-name{font-family:"Playfair Display",serif;font-size:20px;letter-spacing:2px}.brand-sub{display:block;font-size:8px;letter-spacing:3px;color:var(--muted);margin-top:2px}
+    .navlinks{display:flex;gap:28px;font-size:12px;color:#655b53}.navlinks a:hover{color:var(--rose-dark)}.nav-actions{display:flex;align-items:center;gap:10px}
+    .icon-btn{border:1px solid var(--line);background:transparent;border-radius:50%;width:39px;height:39px;display:grid;place-items:center;color:var(--ink);position:relative}.cart-count{position:absolute;right:-3px;top:-4px;background:var(--rose);color:white;border-radius:50%;font-size:9px;min-width:17px;height:17px;display:grid;place-items:center}
+    .menu-btn{display:none}
+    .hero{max-width:1200px;margin:0 auto;padding:48px 5% 70px;display:grid;grid-template-columns:1.02fr .98fr;gap:45px;align-items:center}
+    .eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--rose-dark);font-weight:700}.hero h1{font-family:"Playfair Display",serif;font-size:clamp(42px,6vw,76px);line-height:1.06;font-weight:500;letter-spacing:-1.7px;margin:18px 0}.hero h1 em{color:var(--rose);font-weight:500}.hero p{color:var(--muted);font-size:14px;line-height:1.9;max-width:440px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{border:1px solid var(--ink);background:var(--ink);color:white;padding:14px 22px;font-size:11px;letter-spacing:1.1px;text-transform:uppercase;transition:.25s;display:inline-flex;align-items:center;justify-content:center;gap:9px}.btn:hover{background:var(--rose-dark);border-color:var(--rose-dark);transform:translateY(-2px)}.btn-light{background:transparent;color:var(--ink);border-color:#cfc2b7}.btn-light:hover{color:white}
+    .hero-visual{position:relative;min-height:490px}.hero-photo{position:absolute;inset:0 9% 0 0;border-radius:48% 48% 8px 8px;overflow:hidden;background:linear-gradient(145deg,#d9c6b5,#a18d7c)}.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(35,26,22,.16),transparent 45%)}.floating-note{position:absolute;right:0;bottom:35px;background:#fffaf4;padding:20px 22px;box-shadow:var(--shadow);max-width:185px}.floating-note strong{font-family:"Playfair Display",serif;font-size:18px;font-weight:500;display:block}.floating-note span{font-size:10px;color:var(--muted);line-height:1.6}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 5%;display:flex;justify-content:center;gap:clamp(18px,5vw,70px);flex-wrap:wrap;color:#75695f;font-size:10px;letter-spacing:1.8px;text-transform:uppercase}.ticker span{display:flex;align-items:center;gap:9px}.dot{width:5px;height:5px;border-radius:50%;background:var(--rose)}
+    section{scroll-margin-top:90px}.section{max-width:1200px;margin:auto;padding:82px 5%}.section-head{text-align:center;margin-bottom:34px}.section-head .eyebrow{margin-bottom:10px}.section-head h2{font:500 clamp(30px,4vw,43px) "Playfair Display",serif;margin:0}.section-head p{color:var(--muted);font-size:13px;margin:12px auto 0;max-width:500px;line-height:1.7}
+    .category-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.category-card{height:300px;position:relative;overflow:hidden;background:#d8c7b8}.category-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.category-card:hover img{transform:scale(1.05)}.category-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(28,22,19,.58))}.category-info{position:absolute;z-index:1;left:28px;bottom:25px;color:white}.category-info small{font-size:9px;letter-spacing:2px;text-transform:uppercase}.category-info h3{font:500 31px "Playfair Display",serif;margin:6px 0 10px}.category-info a{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);padding-bottom:5px}
+    .shop-section{background:#f2ece5}.filters{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:0 0 28px}.filter{border:1px solid #d8ccc1;background:transparent;padding:10px 18px;color:#655b53;font-size:10px;letter-spacing:1px;text-transform:uppercase}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:white}
+    .products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.product{background:var(--cream);position:relative}.product-img{height:330px;overflow:hidden;background:#e6dbd0;position:relative}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.product:hover .product-img img{transform:scale(1.04)}.tag{position:absolute;left:13px;top:13px;background:#fbf7f1;padding:7px 10px;font-size:9px;letter-spacing:1px;text-transform:uppercase}.product-info{padding:17px 17px 19px}.product-info h3{font:500 20px "Playfair Display",serif;margin:0 0 7px}.product-meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px}.price{color:var(--rose-dark);font-weight:700;font-size:13px}.product-bottom{display:flex;gap:8px;margin-top:15px}.product-bottom select{min-width:0;flex:1;border:1px solid var(--line);background:white;padding:10px;color:#655b53;font-size:11px}.add-btn{border:0;background:var(--ink);color:white;padding:0 15px;font-size:10px;letter-spacing:.7px;text-transform:uppercase}.add-btn:hover{background:var(--rose-dark)}
+    .story{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.story-image{height:420px;overflow:hidden;background:#d8c9bc}.story-image img{width:100%;height:100%;object-fit:cover}.story-copy h2{font:500 clamp(32px,4vw,46px) "Playfair Display",serif;margin:14px 0}.story-copy p{font-size:13px;line-height:1.9;color:var(--muted)}.promise{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}.promise div{border-top:1px solid var(--line);padding-top:13px}.promise strong{display:block;font:500 17px "Playfair Display",serif}.promise span{font-size:10px;color:var(--muted)}
+    .contact-band{background:#e9ded3;padding:55px 5%;text-align:center}.contact-band h2{font:500 37px "Playfair Display",serif;margin:0 0 10px}.contact-band p{font-size:12px;color:#74675e;line-height:1.8}.contact-band .btn{margin-top:15px}
+    footer{background:#302923;color:#f5eee7;padding:48px 5% 22px}.footer-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px}.footer-brand{font:500 24px "Playfair Display",serif;letter-spacing:2px}.footer-inner p,.footer-inner a{font-size:11px;color:#c8bbb0;line-height:2}.footer-inner h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600}.copyright{max-width:1200px;margin:32px auto 0;border-top:1px solid #51483f;padding-top:17px;color:#a99b8e;font-size:10px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .drawer-backdrop{position:fixed;inset:0;background:rgba(30,24,20,.38);z-index:40;opacity:0;pointer-events:none;transition:.25s}.drawer{position:fixed;z-index:41;right:0;top:0;height:100%;width:min(420px,100%);background:var(--cream);padding:25px;transform:translateX(105%);transition:.3s;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawer-backdrop.open{opacity:1;pointer-events:auto}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.drawer-head h3{font:500 25px "Playfair Display",serif;margin:0}.close-btn{border:0;background:transparent;font-size:24px}.cart-items{overflow:auto;flex:1;padding:15px 0}.cart-row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:13px 0;font-size:12px}.cart-row small{display:block;color:var(--muted);margin-top:5px}.remove{border:0;background:transparent;color:var(--rose-dark);font-size:11px}.cart-summary{border-top:1px solid var(--line);padding-top:15px}.sumline{display:flex;justify-content:space-between;font-size:12px;margin:9px 0}.sumline.total{font-weight:700;font-size:15px}.checkout{width:100%;margin-top:12px}.empty{color:var(--muted);font-size:13px;text-align:center;padding:40px 0}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#302923;color:white;padding:12px 18px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:60}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:800px){.navlinks{display:none}.menu-btn{display:grid}.hero{grid-template-columns:1fr;padding-top:35px;gap:25px}.hero-visual{min-height:400px}.hero-photo{inset:0 7% 0 0}.hero h1{font-size:55px}.products{grid-template-columns:repeat(2,1fr);gap:15px}.product-img{height:270px}.story{gap:28px}.footer-inner{grid-template-columns:1fr 1fr}.footer-inner>div:first-child{grid-column:1/-1}}
+    @media(max-width:520px){.topbar{font-size:9px}.nav{padding:13px 5%}.brand-name{font-size:17px}.hero{padding-bottom:48px}.hero h1{font-size:46px}.hero p{font-size:13px}.hero-visual{min-height:340px}.floating-note{bottom:18px;padding:15px;max-width:155px}.floating-note strong{font-size:16px}.ticker{gap:13px;font-size:8px}.section{padding:60px 5%}.category-grid{gap:10px}.category-card{height:220px}.category-info{left:15px;bottom:17px}.category-info h3{font-size:23px}.category-info small{font-size:8px}.products{grid-template-columns:1fr 1fr;gap:10px}.product-img{height:210px}.product-info{padding:12px}.product-info h3{font-size:17px}.product-meta{font-size:9px;display:block}.price{display:block;margin-top:5px}.product-bottom{gap:5px}.product-bottom select{padding:8px 4px;font-size:10px}.add-btn{padding:0 9px;font-size:9px}.story{grid-template-columns:1fr}.story-image{height:300px}.story-copy h2{font-size:35px}.promise{gap:7px}.promise strong{font-size:15px}.promise span{font-size:9px}.contact-band h2{font-size:30px}.footer-inner{grid-template-columns:1fr 1fr;gap:20px}.copyright{font-size:9px}}
   </style>
 </head>
 <body>
+  <div class="topbar">Complimentary style advice · Karachi delivery available</div>
   <header>
-    <h1>MAA COLLECTION</h1>
-    <p>Elegance in Every Stitch</p>
+    <nav class="nav">
+      <a class="brand" href="#home" aria-label="MAA COLLECTION home"><span class="brand-mark">M</span><span><span class="brand-name">MAA COLLECTION</span><span class="brand-sub">ELEGANCE IN EVERY THREAD</span></span></a>
+      <div class="navlinks"><a href="#home">Home</a><a href="#collections">Collections</a><a href="#shop">Shop</a><a href="#about">Our Story</a><a href="#contact">Contact</a></div>
+      <div class="nav-actions"><button class="icon-btn" id="cartOpen" aria-label="Open shopping bag">♡<span class="cart-count" id="cartCount">0</span></button><button class="icon-btn menu-btn" onclick="document.querySelector('#collections').scrollIntoView()">☰</button></div>
+    </nav>
   </header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#collections">Collections</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <main id="home">
-    <p>WELCOME TO MAA COLLECTION</p>
-    <h2>Discover Your Elegance</h2>
-    <p>Explore our Fancy & Casual Ladies Wear Collections.</p>
-    <a class="btn" href="#collections">Explore Collection</a>
-    <section id="collections">
-      <h2>Our Collections</h2>
-      <p>Fancy Dresses | Casual Wear | New Arrivals</p>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">A little beauty in every detail</div>
+        <h1>Wear your<br><em>kind</em> of elegance.</h1>
+        <p>Thoughtfully selected casual and fancy outfits for the moments that make life beautiful. Discover a look that feels just like you.</p>
+        <div class="actions"><a class="btn" href="#shop">Explore collection <span>↗</span></a><a class="btn btn-light" href="#about">Discover our story</a></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1100&q=85" alt="Elegant traditional outfit inspiration"></div>
+        <div class="floating-note"><strong>Made to feel special.</strong><span>Beautiful picks for everyday moments and celebrations.</span></div>
+      </div>
     </section>
+
+    <div class="ticker"><span><i class="dot"></i> Casual & fancy wear</span><span><i class="dot"></i> Sizes S – XL</span><span><i class="dot"></i> Karachi delivery</span><span><i class="dot"></i> Easy WhatsApp orders</span></div>
+
+    <section class="section" id="collections">
+      <div class="section-head"><div class="eyebrow">Find your favourite</div><h2>Explore the collections</h2><p>From relaxed everyday looks to outfits made for a little celebration.</p></div>
+      <div class="category-grid">
+        <article class="category-card"><img src="https://images.unsplash.com/photo-1583391733956-6c78276477e7?auto=format&fit=crop&w=900&q=85" alt="Casual clothing collection"><div class="category-info"><small>Effortless everyday style</small><h3>Casual Wear</h3><a href="#shop" onclick="setFilter('Casual')">Shop casual ↗</a></div></article>
+        <article class="category-card"><img src="https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=900&q=85" alt="Fancy clothing collection"><div class="category-info"><small>For your special moments</small><h3>Fancy Wear</h3><a href="#shop" onclick="setFilter('Fancy')">Shop fancy ↗</a></div></article>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section">
+        <div class="section-head"><div class="eyebrow">The edit</div><h2>Our latest picks</h2><p>Choose your favourite, select a size and send your order directly on WhatsApp.</p></div>
+        <div class="filters"><button class="filter active" data-filter="All">All pieces</button><button class="filter" data-filter="Casual">Casual wear</button><button class="filter" data-filter="Fancy">Fancy wear</button></div>
+        <div class="products" id="products"></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="story">
+        <div class="story-image"><img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=1000&q=85" alt="Fabric and fashion details"></div>
+        <div class="story-copy"><div class="eyebrow">A warm welcome</div><h2>Style that feels<br>like it belongs to you.</h2><p>At MAA COLLECTION, we believe getting dressed should feel lovely and effortless. Explore our casual and fancy wear selections, and message us if you need help choosing a piece or size.</p><p>Visit us at Delhi Colony, Karachi, or place an order from the comfort of your home.</p><div class="promise"><div><strong>4 days</strong><span>Exchange window*</span></div><div><strong>S – XL</strong><span>Available sizes</span></div><div><strong>Rs. 300</strong><span>Karachi delivery</span></div></div><p style="font-size:10px">*Exchange within 4 days, subject to store policy.</p></div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contact"><div class="eyebrow">We'd love to help</div><h2>Need help choosing?</h2><p>Message us for product details, sizes and availability.<br>Delhi Colony, Karachi · Owner: Yaseen</p><a class="btn" href="https://wa.me/923122682360?text=Assalam-o-Alaikum%2C%20I%20want%20to%20know%20about%20MAA%20COLLECTION." target="_blank" rel="noopener">Chat on WhatsApp ↗</a></section>
   </main>
-  <footer id="contact">
-    <h3>MAA COLLECTION</h3>
-    <p>Karachi, Pakistan</p>
-    <p>Contact us for orders</p>
-  </footer>
+
+  <footer><div class="footer-inner"><div><div class="footer-brand">MAA COLLECTION</div><p>Elegance in every thread.<br>Casual and fancy wear, thoughtfully selected.</p></div><div><h4>Explore</h4><p><a href="#collections">Collections</a><br><a href="#shop">Shop all</a><br><a href="#about">Our story</a></p></div><div><h4>Customer care</h4><p>WhatsApp: +92 312 2682360<br>Delhi Colony, Karachi<br>Delivery: Rs. 300 in Karachi<br>COD · JazzCash · Easypaisa*</p></div></div><div class="copyright"><span>© <span id="year"></span> MAA COLLECTION. All rights reserved.</span><span>*Payment method confirmation is handled directly with the shop.</span></div></footer>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping bag">
+    <div class="drawer-head"><h3>Your shopping bag</h3><button class="close-btn" id="cartClose" aria-label="Close">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty">Your bag is waiting for something lovely.</div></div>
+    <div class="cart-summary"><div class="sumline"><span>Subtotal</span><span id="subtotal">Rs. 0</span></div><div class="sumline"><span>Karachi delivery</span><span>Rs. 300</span></div><div class="sumline total"><span>Estimated total</span><span id="total">Rs. 0</span></div><button class="btn checkout" id="checkout">Continue on WhatsApp ↗</button><p style="font-size:9px;color:var(--muted);line-height:1.6">Order details will be sent to the shop on WhatsApp. Availability and payment will be confirmed by the shop.</p></div>
+  </aside>
+  <div class="toast" id="toast">Added to your bag</div>
+
+  <script>
+    // Add your real products here. Replace image URLs with your hosted product-photo URLs.
+    const products = [
+      {id:1,name:"Everyday Printed Suit",category:"Casual",price:1500,image:"https://images.unsplash.com/photo-1583391733956-6c78276477e7?auto=format&fit=crop&w=800&q=85",tag:"Everyday edit"},
+      {id:2,name:"Elegant Embroidered Suit",category:"Fancy",price:2500,image:"https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=800&q=85",tag:"Special occasion"},
+      {id:3,name:"Soft Pastel Look",category:"Casual",price:1800,image:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=85",tag:"Customer favourite"}
+    ];
+    let currentFilter="All", cart=[];
+    const money=n=>"Rs. "+Number(n).toLocaleString("en-PK");
+    function renderProducts(){
+      const list=products.filter(p=>currentFilter==="All"||p.category===currentFilter);
+      document.getElementById("products").innerHTML=list.map(p=>`
+        <article class="product"><div class="product-img"><img src="${p.image}" alt="${p.name}" loading="lazy"><span class="tag">${p.tag}</span></div>
+        <div class="product-info"><h3>${p.name}</h3><div class="product-meta"><span>${p.category} wear</span><span class="price">${money(p.price)}</span></div>
+        <div class="product-bottom"><select id="size-${p.id}" aria-label="Choose size for ${p.name}"><option value="">Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><button class="add-btn" onclick="addToCart(${p.id})">Add +</button></div></div></article>`).join("");
+    }
+    function setFilter(filter){currentFilter=filter;document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.filter===filter));renderProducts()}
+    document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>setFilter(b.dataset.filter)));
+    function addToCart(id){const p=products.find(x=>x.id===id),size=document.getElementById("size-"+id).value;if(!size){showToast("Please choose a size first");return}cart.push({...p,size,key:Date.now()+Math.random()});renderCart();showToast("Added to your bag")}
+    function removeItem(key){cart=cart.filter(x=>x.key!==key);renderCart()}
+    function renderCart(){const subtotal=cart.reduce((s,p)=>s+p.price,0);document.getElementById("cartCount").textContent=cart.length;document.getElementById("subtotal").textContent=money(subtotal);document.getElementById("total").textContent=money(subtotal+(cart.length?300:0));document.getElementById("cartItems").innerHTML=cart.length?cart.map(p=>`<div class="cart-row"><div><strong>${p.name}</strong><small>${p.category} · Size ${p.size} · ${money(p.price)}</small></div><button class="remove" onclick="removeItem(${p.key})">Remove</button></div>`).join(""):'<div class="empty">Your bag is waiting for something lovely.</div>'}
+    function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("backdrop").classList.add("open")}
+    function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("backdrop").classList.remove("open")}
+    document.getElementById("cartOpen").addEventListener("click",openCart);document.getElementById("cartClose").addEventListener("click",closeCart);document.getElementById("backdrop").addEventListener("click",closeCart);
+    document.getElementById("checkout").addEventListener("click",()=>{if(!cart.length){showToast("Your bag is empty");return}const subtotal=cart.reduce((s,p)=>s+p.price,0);let msg="Assalam-o-Alaikum, I would like to place an order from MAA COLLECTION:%0A%0A";cart.forEach((p,i)=>{msg+=`${i+1}. ${encodeURIComponent(p.name)} - Size ${p.size} - ${money(p.price)}%0A`});msg+=`%0ASubtotal: ${money(subtotal)}%0AKarachi delivery: Rs. 300%0AEstimated total: ${money(subtotal+300)}%0A%0APlease confirm availability and payment details.`;window.open("https://wa.me/923122682360?text="+msg,"_blank","noopener")});
+    function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
+    document.getElementById("year").textContent=new Date().getFullYear();renderProducts();renderCart();
+  </script>
 </body>
 </html>
